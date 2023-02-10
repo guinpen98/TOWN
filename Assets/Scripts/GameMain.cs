@@ -4,13 +4,25 @@ using UnityEngine;
 
 public class GameMain : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameState _gameState;
+    GameEvent _gameEvent;
+
+    List<BaseSystem> _baseSystemList;
+    List<IPreUpdate> _preUpdateList;
+    List<IOnUpdate> _onUpdateList;
+
+    void Awake()
     {
-        
+        _gameEvent = new GameEvent();
+
+        _baseSystemList = new List<BaseSystem>
+        {
+
+        };
+
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         

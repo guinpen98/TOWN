@@ -1,0 +1,4 @@
+interface IPreUpdate
+{
+    void PreUpdate();
+}

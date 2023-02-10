@@ -1,0 +1,4 @@
+interface IOnUpdate
+{
+    void OnUpdate();
+}
