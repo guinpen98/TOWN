@@ -21,7 +21,8 @@ public class GameMain : MonoBehaviour
             new InputSystem(),
             new MoveSystem(),
             new TimeSystem(),
-            new UISystem()
+            new UISystem(),
+            new DiurnalCycleSystem()
         };
 
         foreach(ISystem system in _baseSystemList)

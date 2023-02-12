@@ -18,6 +18,9 @@ public class GameState
     // UI
     public TextMeshProUGUI timeText;
 
+    // GameObject
+    public GameObject directionalLight;
+
     // Facility
     public Transform housePosition;
 
