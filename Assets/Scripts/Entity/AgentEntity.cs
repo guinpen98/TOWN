@@ -7,6 +7,8 @@ public class AgentEntity : MonoBehaviour
     public StatusComponent statusComponent;
     public AIComponent aiComponent;
 
+    public GameObject agentCamera;
+
     void Start()
     {
 

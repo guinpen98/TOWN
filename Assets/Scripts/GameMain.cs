@@ -18,11 +18,13 @@ public class GameMain : MonoBehaviour
         _onUpdateList = new List<IOnUpdate>();
         _baseSystemList = new List<ISystem>
         {
+            new GameRule(),
             new InputSystem(),
             new MoveSystem(),
             new TimeSystem(),
             new UISystem(),
-            new DiurnalCycleSystem()
+            new DiurnalCycleSystem(),
+            new CameraSystem()
         };
 
         foreach(ISystem system in _baseSystemList)

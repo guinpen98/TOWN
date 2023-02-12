@@ -20,6 +20,7 @@ public class GameState
 
     // GameObject
     public GameObject directionalLight;
+    public GameObject activeCamera;
 
     // Facility
     public Transform housePosition;
