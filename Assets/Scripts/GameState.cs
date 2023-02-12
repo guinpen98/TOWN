@@ -18,6 +18,9 @@ public class GameState
     // UI
     public TextMeshProUGUI timeText;
 
+    // Facility
+    public Transform housePosition;
+
     // ゲームの状態
     public float time;
 
