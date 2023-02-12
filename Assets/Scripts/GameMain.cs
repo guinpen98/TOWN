@@ -19,7 +19,9 @@ public class GameMain : MonoBehaviour
         _baseSystemList = new List<ISystem>
         {
             new InputSystem(),
-            new MoveSystem()
+            new MoveSystem(),
+            new TimeSystem(),
+            new UISystem()
         };
 
         foreach(ISystem system in _baseSystemList)
