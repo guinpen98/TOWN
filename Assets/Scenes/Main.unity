@@ -486,7 +486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveComponent:
     walkSpeed: 10
-    rotateSpeed: 40
+    rotateSpeed: 60
   rb: {fileID: 836764482}
 --- !u!4 &836764481
 Transform:

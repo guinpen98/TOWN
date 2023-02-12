@@ -41,10 +41,22 @@ public class MoveSystem : BaseSystem, IOnUpdate
 
     void AgentMovement()
     {
+        RotateAgent();
+
         if (_gameState.agentEntity.aiComponent.navMeshAgent.remainingDistance <= _gameState.agentEntity.aiComponent.navMeshAgent.stoppingDistance)
         {
             SetAgentDistination(_gameState.agentEntity.aiComponent.navMeshAgent, new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)));
         }
+    }
+
+    void RotateAgent()
+    {
+        Vector3 nextPoint = _gameState.agentEntity.aiComponent.navMeshAgent.steeringTarget;
+        Vector3 targetDir = nextPoint - _gameState.agentEntity.transform.position;
+        if (targetDir == Vector3.zero) return;
+
+        Quaternion targetRotation = Quaternion.LookRotation(targetDir);
+        _gameState.agentEntity.transform.rotation = Quaternion.RotateTowards(_gameState.agentEntity.transform.rotation, targetRotation, 120f * Time.deltaTime);
     }
 
     void SetAgentDistination(NavMeshAgent navMeshAgent, Vector3 distination)
