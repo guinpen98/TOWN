@@ -41,9 +41,9 @@ public class MoveSystem : BaseSystem, IOnUpdate
 
     void AgentMovement()
     {
-        if (_gameState.agentEntity.navMeshAgent.remainingDistance <= _gameState.agentEntity.navMeshAgent.stoppingDistance)
+        if (_gameState.agentEntity.aiComponent.navMeshAgent.remainingDistance <= _gameState.agentEntity.aiComponent.navMeshAgent.stoppingDistance)
         {
-            SetAgentDistination(_gameState.agentEntity.navMeshAgent, new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)));
+            SetAgentDistination(_gameState.agentEntity.aiComponent.navMeshAgent, new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)));
         }
     }
 
