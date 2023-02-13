@@ -13,7 +13,7 @@ public class MoveSystem : BaseSystem, IOnUpdate
     public void OnUpdate()
     {
         PlayerMovement();
-        AgentMovement();
+        AgentsMovement();
     }
 
     void PlayerMovement()
@@ -39,24 +39,28 @@ public class MoveSystem : BaseSystem, IOnUpdate
         _gameState.playerEntity.rb.velocity = _gameState.playerEntity.transform.forward * _gameState.playerEntity.moveComponent.walkSpeed * direction;
     }
 
-    void AgentMovement()
+    void AgentsMovement()
     {
-        RotateAgent();
+        RotateAgents();
 
-        if (_gameState.agentEntity.aiComponent.navMeshAgent.remainingDistance <= _gameState.agentEntity.aiComponent.navMeshAgent.stoppingDistance)
+        foreach (var agentEntity in _gameState.agentEntity)
         {
-            SetAgentDistination(_gameState.agentEntity.aiComponent.navMeshAgent, new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)));
+            if (agentEntity.aiComponent.navMeshAgent.remainingDistance > agentEntity.aiComponent.navMeshAgent.stoppingDistance) return;
+            SetAgentDistination(agentEntity.aiComponent.navMeshAgent, new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)));
         }
     }
 
-    void RotateAgent()
+    void RotateAgents()
     {
-        Vector3 nextPoint = _gameState.agentEntity.aiComponent.navMeshAgent.steeringTarget;
-        Vector3 targetDir = nextPoint - _gameState.agentEntity.transform.position;
-        if (targetDir == Vector3.zero) return;
+        foreach(var agentEntity in _gameState.agentEntity)
+        {
+            Vector3 nextPoint = agentEntity.aiComponent.navMeshAgent.steeringTarget;
+            Vector3 targetDir = nextPoint - agentEntity.transform.position;
+            if (targetDir == Vector3.zero) return;
 
-        Quaternion targetRotation = Quaternion.LookRotation(targetDir);
-        _gameState.agentEntity.transform.rotation = Quaternion.RotateTowards(_gameState.agentEntity.transform.rotation, targetRotation, 120f * Time.deltaTime);
+            Quaternion targetRotation = Quaternion.LookRotation(targetDir);
+            agentEntity.transform.rotation = Quaternion.RotateTowards(agentEntity.transform.rotation, targetRotation, 120f * Time.deltaTime);
+        }
     }
 
     void SetAgentDistination(NavMeshAgent navMeshAgent, Vector3 distination)
