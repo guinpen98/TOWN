@@ -45,7 +45,7 @@ public class MoveSystem : BaseSystem, IOnUpdate
 
         foreach (var agentEntity in _gameState.agentEntity)
         {
-            if (agentEntity.aiComponent.navMeshAgent.remainingDistance > agentEntity.aiComponent.navMeshAgent.stoppingDistance) return;
+            if (agentEntity.aiComponent.navMeshAgent.remainingDistance > agentEntity.aiComponent.navMeshAgent.stoppingDistance) continue;
             SetAgentDistination(agentEntity.aiComponent.navMeshAgent, new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)));
         }
     }
