@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseSystem : ISystem
+public abstract class BaseSystem : ISystem
 {
     protected GameState _gameState;
     protected GameEvent _gameEvent;

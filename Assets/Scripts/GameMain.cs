@@ -9,14 +9,14 @@ public class GameMain : MonoBehaviour
 
     List<IPreUpdate> _preUpdateList;
     List<IOnUpdate> _onUpdateList;
-    List<ISystem> _baseSystemList;
+    List<ISystem> _systemList;
 
     void Awake()
     {
         _gameEvent = new GameEvent();
         _preUpdateList = new List<IPreUpdate>();
         _onUpdateList = new List<IOnUpdate>();
-        _baseSystemList = new List<ISystem>
+        _systemList = new List<ISystem>
         {
             new GameRule(),
             new InputSystem(),
@@ -27,7 +27,7 @@ public class GameMain : MonoBehaviour
             new CameraSystem()
         };
 
-        foreach(ISystem system in _baseSystemList)
+        foreach(ISystem system in _systemList)
         {
             system.Init(_gameState, _gameEvent);
             system.SetEvent();

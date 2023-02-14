@@ -13,7 +13,7 @@ public class GameState
 
     // Entity
     public PlayerEntity playerEntity;
-    public AgentEntity[] agentEntity;
+    public AgentEntity[] agentEntities;
 
     // UI
     public TextMeshProUGUI timeText;

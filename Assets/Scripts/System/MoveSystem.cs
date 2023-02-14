@@ -43,7 +43,7 @@ public class MoveSystem : BaseSystem, IOnUpdate
     {
         RotateAgents();
 
-        foreach (var agentEntity in _gameState.agentEntity)
+        foreach (var agentEntity in _gameState.agentEntities)
         {
             if (agentEntity.aiComponent.navMeshAgent.remainingDistance > agentEntity.aiComponent.navMeshAgent.stoppingDistance) continue;
             SetAgentDistination(agentEntity.aiComponent.navMeshAgent, new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10)));
@@ -52,7 +52,7 @@ public class MoveSystem : BaseSystem, IOnUpdate
 
     void RotateAgents()
     {
-        foreach(var agentEntity in _gameState.agentEntity)
+        foreach(var agentEntity in _gameState.agentEntities)
         {
             Vector3 nextPoint = agentEntity.aiComponent.navMeshAgent.steeringTarget;
             Vector3 targetDir = nextPoint - agentEntity.transform.position;
