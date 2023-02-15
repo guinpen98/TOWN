@@ -24,7 +24,8 @@ public class GameMain : MonoBehaviour
             new TimeSystem(),
             new UISystem(),
             new DiurnalCycleSystem(),
-            new CameraSystem()
+            new CameraSystem(),
+            new AgentSystem()
         };
 
         foreach(ISystem system in _systemList)

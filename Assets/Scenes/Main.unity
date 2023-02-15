@@ -1206,6 +1206,11 @@ PrefabInstance:
       propertyPath: agentCamera
       value: 
       objectReference: {fileID: 1956135606}
+    - target: {fileID: 2777216149598516487, guid: 7448b1e95e05246eb8e4f13b5583e07c,
+        type: 3}
+      propertyPath: statusComponent.satiety
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 2777216149598554875, guid: 7448b1e95e05246eb8e4f13b5583e07c,
         type: 3}
       propertyPath: m_Name
@@ -2044,6 +2049,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777216149598516487, guid: 7448b1e95e05246eb8e4f13b5583e07c,
+        type: 3}
+      propertyPath: statusComponent.satiety
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2777216149598554875, guid: 7448b1e95e05246eb8e4f13b5583e07c,
         type: 3}

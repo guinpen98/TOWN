@@ -27,7 +27,7 @@ public class UISystem : BaseSystem, IOnUpdate
     {
         if (_gameState.cameraTargetEntity == null) return;
 
-        _gameState.satietyText.text = "Satiety " + _gameState.cameraTargetEntity.statusComponent.satiety.ToString();
+        _gameState.satietyText.text = "Satiety " + _gameState.cameraTargetEntity.statusComponent.satiety.ToString("f0");
     }
 
     void ActiveAgentCanvas()
