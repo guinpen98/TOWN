@@ -7,7 +7,7 @@ public class CameraSystem : BaseSystem
     public override void SetEvent()
     {
         _gameEvent.SetTaegetCamera += SetTaegetCamera;
-        _gameEvent.DeactiveTargetCamera += DeactiveTargetCamera;
+        _gameEvent.SetCamera += SetCamera;
     }
 
     void SetTaegetCamera(GameObject gameObject)
@@ -26,9 +26,21 @@ public class CameraSystem : BaseSystem
         _gameEvent.TargetedCamera.Invoke();
     }
 
+    void SetCamera()
+    {
+        if (_gameState.cameraTargetEntity == null) SetPlayerCamera();
+        else DeactiveTargetCamera();
+
+    }
+
+    void SetPlayerCamera()
+    {
+        bool isActive = _gameState.playerEntity.playerCamera.activeSelf;
+        _gameState.playerEntity.playerCamera.SetActive(!isActive);
+    }
+
     void DeactiveTargetCamera()
     {
-        if (_gameState.cameraTargetEntity == null) return;
         _gameState.cameraTargetEntity.agentCamera.SetActive(false);
         _gameState.cameraTargetEntity = null;
     }

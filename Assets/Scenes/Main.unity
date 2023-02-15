@@ -629,6 +629,7 @@ MonoBehaviour:
     walkSpeed: 10
     rotateSpeed: 80
   rb: {fileID: 836764482}
+  playerCamera: {fileID: 1423408914}
 --- !u!4 &836764481
 Transform:
   m_ObjectHideFlags: 0
@@ -1574,7 +1575,7 @@ MonoBehaviour:
     agentPanel: {fileID: 1479759939}
     satietyText: {fileID: 245237078}
     directionalLight: {fileID: 1407868941}
-    cameraTargetAgent: {fileID: 0}
+    cameraTargetEntity: {fileID: 0}
     housePosition: {fileID: 1904861664}
     time: 0
     onWKey: 0

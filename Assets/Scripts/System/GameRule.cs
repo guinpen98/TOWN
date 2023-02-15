@@ -9,7 +9,7 @@ public class GameRule : BaseSystem
     {
         _gameEvent.AriveDistination += SetAgentDistination;
         _gameEvent.OnClickGameObject += SetTaegetCamera;
-        _gameEvent.DownSpaceKey += DeactiveTargetCamera;
+        _gameEvent.DownSpaceKey += SetCamera;
         _gameEvent.DownSpaceKey += DeactiveAgentCanvas;
         _gameEvent.TargetedCamera += ActiveAgentCanvas;
     }
@@ -24,9 +24,9 @@ public class GameRule : BaseSystem
         _gameEvent.SetTaegetCamera.Invoke(gameObject);
     }
 
-    void DeactiveTargetCamera()
+    void SetCamera()
     {
-        _gameEvent.DeactiveTargetCamera.Invoke();
+        _gameEvent.SetCamera.Invoke();
     }
 
     void ActiveAgentCanvas()
