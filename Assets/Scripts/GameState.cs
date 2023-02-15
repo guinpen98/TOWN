@@ -17,10 +17,12 @@ public class GameState
 
     // UI
     public TextMeshProUGUI timeText;
+    public GameObject agentPanel;
+    public TextMeshProUGUI satietyText;
 
     // GameObject
     public GameObject directionalLight;
-    public GameObject cameraTargetAgent;
+    public AgentEntity cameraTargetEntity;
 
     // Facility
     public Transform housePosition;

@@ -10,6 +10,8 @@ public class GameRule : BaseSystem
         _gameEvent.AriveDistination += SetAgentDistination;
         _gameEvent.OnClickGameObject += SetTaegetCamera;
         _gameEvent.DownSpaceKey += DeactiveTargetCamera;
+        _gameEvent.DownSpaceKey += DeactiveAgentCanvas;
+        _gameEvent.TargetedCamera += ActiveAgentCanvas;
     }
 
     void SetAgentDistination(NavMeshAgent agent, Vector3 distination)
@@ -25,5 +27,15 @@ public class GameRule : BaseSystem
     void DeactiveTargetCamera()
     {
         _gameEvent.DeactiveTargetCamera.Invoke();
+    }
+
+    void ActiveAgentCanvas()
+    {
+        _gameEvent.ActiveAgentCanvas.Invoke();
+    }
+
+    void DeactiveAgentCanvas()
+    {
+        _gameEvent.DeactiveAgentCanvas.Invoke();
     }
 }

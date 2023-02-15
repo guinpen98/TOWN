@@ -18,19 +18,18 @@ public class CameraSystem : BaseSystem
         if (!rootObject.TryGetComponent(out AgentEntity agentEntity))
             throw new System.NullReferenceException("AgentEntity script is not found");
 
-        if (_gameState.cameraTargetAgent != null && _gameState.cameraTargetAgent.TryGetComponent(out AgentEntity preAgentEntity))
-            preAgentEntity.agentCamera.SetActive(false);
+        if (_gameState.cameraTargetEntity != null)
+            _gameState.cameraTargetEntity.agentCamera.SetActive(false);
 
         agentEntity.agentCamera.SetActive(true);
-        _gameState.cameraTargetAgent = agentEntity.gameObject;
-
+        _gameState.cameraTargetEntity = agentEntity;
+        _gameEvent.TargetedCamera.Invoke();
     }
 
     void DeactiveTargetCamera()
     {
-        if (_gameState.cameraTargetAgent == null) return;
-        if (!_gameState.cameraTargetAgent.TryGetComponent(out AgentEntity agentEntity)) return;
-        agentEntity.agentCamera.SetActive(false);
-        _gameState.cameraTargetAgent = null;
+        if (_gameState.cameraTargetEntity == null) return;
+        _gameState.cameraTargetEntity.agentCamera.SetActive(false);
+        _gameState.cameraTargetEntity = null;
     }
 }

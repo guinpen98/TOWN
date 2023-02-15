@@ -10,4 +10,7 @@ public class GameEvent
     public Action DownSpaceKey;
     public Action DeactiveTargetCamera;
     public Action<GameObject> SetTaegetCamera;
+    public Action TargetedCamera;
+    public Action ActiveAgentCanvas;
+    public Action DeactiveAgentCanvas;
 }
