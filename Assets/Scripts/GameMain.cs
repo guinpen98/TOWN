@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// システム層の呼び出し元のクラス
+/// </summary>
 public class GameMain : MonoBehaviour
 {
     [SerializeField] GameState _gameState;

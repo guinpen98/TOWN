@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 入力管理クラス
+/// </summary>
 public class InputSystem : BaseSystem, IPreUpdate
 {
 

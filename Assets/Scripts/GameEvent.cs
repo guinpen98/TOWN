@@ -2,6 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// イベントクラス
+/// </summary>
 public class GameEvent
 {
     public Action<NavMeshAgent, Vector3> AriveDistination;

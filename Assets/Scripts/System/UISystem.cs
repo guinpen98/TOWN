@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// UI管理クラス
+/// </summary>
 public class UISystem : BaseSystem, IOnUpdate
 {
     public override void SetEvent()

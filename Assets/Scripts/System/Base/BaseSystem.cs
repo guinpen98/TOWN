@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// システムの抽象クラス
+/// </summary>
 public abstract class BaseSystem : ISystem
 {
     protected GameState _gameState;

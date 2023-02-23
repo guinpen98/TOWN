@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 昼夜管理クラス
+/// </summary>
 public class DiurnalCycleSystem : BaseSystem, IOnUpdate
 {
     public void OnUpdate()

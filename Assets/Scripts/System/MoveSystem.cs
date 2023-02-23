@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// 動作管理クラス
+/// </summary>
 public class MoveSystem : BaseSystem, IOnUpdate
 {
     public override void SetEvent()
@@ -13,7 +16,7 @@ public class MoveSystem : BaseSystem, IOnUpdate
     public void OnUpdate()
     {
         PlayerMovement();
-        AgentsMovement();
+        //AgentsMovement();
     }
 
     void PlayerMovement()

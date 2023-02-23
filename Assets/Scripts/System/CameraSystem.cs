@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// カメラの管理クラス
+/// </summary>
 public class CameraSystem : BaseSystem
 {
     public override void SetEvent()

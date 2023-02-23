@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/// <summary>
+/// イベントの管理クラス
+/// </summary>
 public class GameRule : BaseSystem
 {
     public override void SetEvent()

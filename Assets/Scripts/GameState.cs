@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// ゲームの状態を保持するクラスs
+/// </summary>
 [System.Serializable]
 public class GameState
 {

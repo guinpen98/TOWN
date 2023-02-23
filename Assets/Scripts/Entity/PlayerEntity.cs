@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// プレイヤーのエンティティクラス
+/// </summary>
 public class PlayerEntity : MonoBehaviour
 {
     public MoveComponent moveComponent;
