@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49d93b376da64006a95e4211376cb00, type: 3}
   m_Name: PlayingState
   m_EditorClassIdentifier: 
-  state: 0
-  logic: {fileID: 0}
-  action: {fileID: 0}
+  state: 4
+  logic: {fileID: 11400000, guid: 8f80d4901d6f54098aec409f30ee570b, type: 2}
+  action: {fileID: 11400000, guid: 78c7f27d30b2e4db986759197d153ac3, type: 2}

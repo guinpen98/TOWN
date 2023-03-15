@@ -21,7 +21,10 @@ public class GameState
     // UI
     public TextMeshProUGUI timeText;
     public GameObject agentPanel;
+    public TextMeshProUGUI hapinessText;
     public TextMeshProUGUI satietyText;
+    public TextMeshProUGUI sleepinessText;
+    public TextMeshProUGUI stateText;
 
     // GameObject
     public GameObject directionalLight;

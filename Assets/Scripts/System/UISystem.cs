@@ -30,7 +30,10 @@ public class UISystem : BaseSystem, IOnUpdate
     {
         if (_gameState.cameraTargetEntity == null) return;
 
+        _gameState.hapinessText.text = "Hapiness " + _gameState.cameraTargetEntity.statusComponent.happiness.ToString("f0");
         _gameState.satietyText.text = "Satiety " + _gameState.cameraTargetEntity.statusComponent.satiety.ToString("f0");
+        _gameState.sleepinessText.text = "Sleepiness " + _gameState.cameraTargetEntity.statusComponent.sleepiness.ToString("f0");
+        _gameState.stateText.text = "State " + _gameState.cameraTargetEntity.statusComponent.state;
     }
 
     void ActiveAgentCanvas()
