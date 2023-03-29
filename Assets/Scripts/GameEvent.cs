@@ -16,4 +16,5 @@ public class GameEvent
     public Action TargetedCamera;
     public Action ActiveAgentCanvas;
     public Action DeactiveAgentCanvas;
+    public Action Save;
 }

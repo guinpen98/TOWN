@@ -7,6 +7,13 @@ using UnityEngine;
 /// </summary>
 public class TimeSystem : BaseSystem, IPreUpdate
 {
+    public override void Init(GameState gameState, GameEvent gameEvent)
+    {
+        base.Init(gameState, gameEvent);
+
+        _gameState.time = _gameState.saveData.time;
+    }
+
     public void PreUpdate()
     {
         _gameState.time += Time.deltaTime;

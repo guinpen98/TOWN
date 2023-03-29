@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 /// <summary>
@@ -14,6 +15,10 @@ public class GameState
     public const float timeOfHour = timeOfDay / 24;
     public const float timeOfMinute = timeOfHour/ 60;
 
+    // SaveData
+    public string filePath;
+    public SaveData saveData;
+
     // Entity
     public PlayerEntity playerEntity;
     public AgentEntity[] agentEntities;
@@ -25,6 +30,7 @@ public class GameState
     public TextMeshProUGUI satietyText;
     public TextMeshProUGUI sleepinessText;
     public TextMeshProUGUI stateText;
+    public Button saveButton;
 
     // GameObject
     public GameObject directionalLight;

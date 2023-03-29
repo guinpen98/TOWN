@@ -11,6 +11,7 @@ public class UISystem : BaseSystem, IOnUpdate
     {
         _gameEvent.ActiveAgentCanvas += ActiveAgentCanvas;
         _gameEvent.DeactiveAgentCanvas += DeactiveAgentCanvas;
+        _gameState.saveButton.onClick.AddListener(SaveButton);
     }
 
     public void OnUpdate()
@@ -34,6 +35,11 @@ public class UISystem : BaseSystem, IOnUpdate
         _gameState.satietyText.text = "Satiety " + _gameState.cameraTargetEntity.statusComponent.satiety.ToString("f0");
         _gameState.sleepinessText.text = "Sleepiness " + _gameState.cameraTargetEntity.statusComponent.sleepiness.ToString("f0");
         _gameState.stateText.text = "State " + _gameState.cameraTargetEntity.statusComponent.state;
+    }
+
+    void SaveButton()
+    {
+        _gameEvent.Save.Invoke();
     }
 
     void ActiveAgentCanvas()

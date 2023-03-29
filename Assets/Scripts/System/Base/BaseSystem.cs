@@ -10,7 +10,7 @@ public abstract class BaseSystem : ISystem
     protected GameState _gameState;
     protected GameEvent _gameEvent;
 
-    public void Init(GameState gameState, GameEvent gameEvent)
+    public virtual void Init(GameState gameState, GameEvent gameEvent)
     {
         _gameState = gameState;
         _gameEvent = gameEvent;

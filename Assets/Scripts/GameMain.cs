@@ -22,6 +22,7 @@ public class GameMain : MonoBehaviour
         _systemList = new List<ISystem>
         {
             new GameRule(),
+            new SaveSystem(),
             new InputSystem(),
             new MoveSystem(),
             new TimeSystem(),
